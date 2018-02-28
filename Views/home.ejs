@@ -1,11 +1,50 @@
 <% include ./partials/header %>
-<h1>Search For a Movie</h1>
 
 
-<form class="" action="/showMovies" method="GET">
-  <input type="text" placeholder="Search Term" class="credits" name="search">
-  <input type="submit" placeholder="submit">
-</form>
+
+
+<div class="container">
+<!-- navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+  <div class="container">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="#"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="MyNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href"#">About</a></li>
+            <li><a href"#">Services</a></li>
+            <li><a href"#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+<!-- end of navbar -->
+</nav>
+
+<header class="header">
+  <h1>Search For a Movie</h1>
+
+</header>
+
+
+
+  <form class="" action="/showMovies" method="GET">
+    <input type="text" placeholder="Look up your fav movie" class="credits" name="search"><br />
+    <input type="submit" class="btn btn-info">
+  </form>
+  // end of container
+</div>
+
 
 
 <% include ./partials/footer %>
