@@ -1,0 +1,71 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script  type="text/javascript">
+$(document).ready(function(){
+
+
+
+
+
+    // This prints out the unqiue id of each movie
+    $( ".clickable" ).click(function() {
+      var item = $(this).closest('.thumbnail').find(".id").text();
+
+      var url = "http://www.omdbapi.com/?i=" + item + "&plot=true&&apikey=c3090b9a";
+      axios.get(url)
+        .then((response) => {
+          console.log(response);
+          // movie is the object you get back
+          var movie = response.data;
+
+
+          // calling the modal
+          var span = document.getElementsByClassName("close")[0];
+          var modal = document.getElementById('myModal');
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+          // displays the modal
+          modal.style.display = "block";
+          // adding elements to the modal
+          $("#modal-header").html("<h1>" + movie.Title + "</h1>").css("text-align", "center");
+          var img = $('<img id="dynamic">');
+          img.attr('src', movie.Poster);
+          img.appendTo('.modal-body').css("float","right");
+          $('.modal-body').append("<h1 id='#actor'> Actors: " + movie.Actors + "</h1>").css("float","right");
+        //  $('<p>' + movie.Actors + '</p>').html('my name is xyz').css('float-right', '20px').insertAfter($('#dynamic'));
+
+
+
+
+
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+          }
+
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      });
+
+}); // end of document function
+
+
+
+</script>
+</body>
+</html>
