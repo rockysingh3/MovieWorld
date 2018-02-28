@@ -3,6 +3,7 @@ const app = express();
 const request = require('request');
 
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 
 
