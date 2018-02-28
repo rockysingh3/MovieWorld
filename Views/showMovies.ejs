@@ -10,12 +10,14 @@
           <div class="col-md-3 col-sm-6">
             <div  class="thumbnail">
               <div class="caption">
-                <li><%= movie["Title"] %></li>
-                <li><%= movie["Year"] %></li>
+                <li id="title"><%= movie["Title"] %></li>
+                <!-- <li id="year"><%= movie["Year"] %></li> -->
                 <li class="id"><%= movie["imdbID"]%></li>
               </div>
               <img  src="<%= movie["Poster"] %>" alt="">
-              <button class="clickable"  type="button" name="button">Get More details About The Movie</button>
+              <div class="form-group">
+                <button class="clickable btn btn-secondary"  type="button" name="button">Get More details About The Movie</button>
+              </div>
             </div>
           </div>
         <% }) %>

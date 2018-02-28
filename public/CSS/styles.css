@@ -9,8 +9,10 @@
   margin-left: 410px;
 }
 
+
+/* showMovies display */
 #displayMovies img {
-  width: 100%;
+  width: 110%;
 }
 
 #displayMovies .col-md-3 {
@@ -18,7 +20,7 @@
 }
 
 #displayMovies .col-md-3 img {
-  height: 350px;
+  height: 400px;
 }
 
 #background {
@@ -27,5 +29,11 @@
 
 
 .caption li {
-  list-style: none;  
+  list-style: none;
+}
+
+#title {
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
 }
