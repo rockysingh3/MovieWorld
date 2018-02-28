@@ -1,3 +1,10 @@
+/* header is main text on the page */
 .header {
-  margin-top: 50px;
+  margin-top: 200px;
+  text-align: center;
+}
+
+/* centers the text on navbar */
+.navbar-center {
+  margin-left: 410px;
 }
