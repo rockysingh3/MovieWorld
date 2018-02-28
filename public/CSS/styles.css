@@ -24,3 +24,8 @@
 #background {
   margin-top: 80px;
 }
+
+
+.caption li {
+  list-style: none;  
+}
