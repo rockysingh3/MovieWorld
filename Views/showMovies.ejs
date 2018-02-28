@@ -1,0 +1,54 @@
+<% include ./partials/header %>
+
+<div id="background" class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>This is jumbotron</h1>
+      <p>View our hand picked movies</p>
+    </div>
+  </header>
+
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% data["Search"].forEach((movie) => { %>
+          <div class="col-md-3 col-sm-6">
+            <div  class="thumbnail">
+              <div class="caption">
+                <li><%= movie["Title"] %></li>
+                <li><%= movie["Year"] %></li>
+                <li class="id"><%= movie["imdbID"]%></li>
+              </div>
+              <img  src="<%= movie["Poster"] %>" alt="">
+              <button class="clickable"  type="button" name="button">Get More details About The Movie</button>
+            </div>
+          </div>
+        <% }) %>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 id="modal-header"></h2>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- end of container -->
+</div>
+
+
+
+
+
+<% include ./partials/footer %>
