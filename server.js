@@ -15,12 +15,8 @@ app.get("/", (req, res) => {
 });
 
 
-app.get('/detials', (req, res) => {
-  res.render("detials");
-});
 
-
-
+// makes the request to the api
 app.get('/home', (req, res) => {
     let query = req.query.search;
     let urlWithoutId = "http://www.omdbapi.com/?s=" + query + "&plot=true&&apikey=c3090b9a";
