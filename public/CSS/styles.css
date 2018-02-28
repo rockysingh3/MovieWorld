@@ -1,10 +1,26 @@
 /* header is main text on the page */
 .header {
-  margin-top: 200px;
+  margin-top: 250px;
   text-align: center;
 }
 
 /* centers the text on navbar */
 .navbar-center {
   margin-left: 410px;
+}
+
+#displayMovies img {
+  width: 100%;
+}
+
+#displayMovies .col-md-3 {
+  height: 520px;
+}
+
+#displayMovies .col-md-3 img {
+  height: 350px;
+}
+
+#background {
+  margin-top: 80px;
 }
