@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 
 // makes the request to the api
 app.get('/showMovies', (req, res) => {
+
     let query = req.query.search;
     let urlWithoutId = "http://www.omdbapi.com/?s=" + query + config.id;
     request(urlWithoutId, (error, response, body) => {
