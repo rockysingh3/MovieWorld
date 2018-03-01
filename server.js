@@ -31,6 +31,11 @@ app.get('/showMovies', (req, res) => {
 });
 
 
+// 404 erro route
+router.get('*', (req, res, next) => {
+  res.render('404');
+});
+
 
 
 
