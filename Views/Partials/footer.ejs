@@ -36,7 +36,12 @@ $(document).ready(function(){
           var img = $('<img id="dynamic">');
           img.attr('src', movie.Poster);
           img.appendTo('.modal-body').css("float","right");
-          $('.modal-body').append("<h1 id='#actor'> Actors: " + movie.Actors + "</h1>").css("float","right");
+          $('.modal-body').append("<h1 style='font-size: 40px;' id='#actor'> Actors: " + movie.Actors + "</h1>").css("float","right");
+          var Genre = "Genre: ";
+          $('.modal-body').append("<h1 id='#genre'> Genre: " + movie.Genre + "</h1>").css("float","right");
+          $('.modal-body').append("<h1 id='#awards'> Awards: " + movie.Awards + "</h1>").css("float","right");
+          $('.modal-body').append("<h1 id='#director'> Director: " + movie.Director + "</h1>").css("float","right");
+          $('.modal-body').append("<h1 id='#director'> Plot: " + movie.Plot + "</h1>").css("float","right");
         //  $('<p>' + movie.Actors + '</p>').html('my name is xyz').css('float-right', '20px').insertAfter($('#dynamic'));
 
 
